@@ -1,0 +1,296 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body and Background */
+body {
+    background-color: #f4f4f4;  /* Light grey background for contrast */
+    color: #333;  /* Dark text for readability */
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #002F6C; /* Dark blue for header background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #F1A40E; /* Gold border for emphasis */
+}
+
+.header .left-img {
+    width: 100px;
+    height: auto;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.header .right-img {
+    width: 120px;
+    height: auto;
+}
+
+/* Navigation Menu */
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #004d99;  /* Slightly lighter blue for nav bar */
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+     /* Fix the nav bar at the top */
+    top: 80px;  /* Ensure the navbar is just below the header */
+    width: 100%;
+    z-index: 10;  /* Ensure the nav bar is above other content */
+}
+
+.nav-item {
+    position: relative;
+    margin: 0 15px;
+}
+
+.nav-title {
+    color: #fff;  /* White color for better contrast */
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-title:hover {
+    background-color: #F1A40E;  /* Gold color on hover for visibility */
+    border-radius: 5px;  /* Rounded corners on hover */
+}
+
+/* Dropdown Menu */
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;  /* Ensure dropdown is positioned below nav item */
+    left: 0;
+    background-color: #005bb5;  /* Strong blue for dropdown */
+    display: none;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list li {
+    padding: 12px 15px;
+    background-color: #e0f0ff;  /* Light blue background for list items */
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 5px;
+    transition: background-color 0.3s ease;  /* Smooth hover effect */
+}
+
+.nav-list li:hover {
+    background-color: #cce0ff;  /* Lighter blue when hovered */
+}
+
+/* Show list on hover */
+.nav-item:hover .nav-list {
+    display: block;
+}
+.nav-bar {
+    display: flex;
+    background-color: #808080; /* Grey background */
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nav-item {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.nav-item.active {
+    background-color: #0b3a53; /* Dark blue background for active item */
+    color: #00bfff; /* Highlighted text color */
+}
+
+.nav-item:hover {
+    background-color: #666666; /* Slightly darker grey on hover */
+    cursor: pointer;
+}
+
+/* Scrolling Image Section */
+/* Scrolling Image Section */
+.image-scroll {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 400px; /* Adjust height as needed */
+    background-color: #e0f7fa; /* Light blue background */
+    margin-top: 50px; /* Reduced padding between navbar and scrolling section */
+}
+
+.image-scroll-wrapper {
+    display: flex;
+    animation: scroll-images 20s linear infinite; /* Auto scroll animation */
+}
+
+.image-scroll-wrapper img {
+    width: 100vw;  /* Set image width to the full viewport width */
+    height: 400px; /* Set height for the images */
+    object-fit: cover; /* Ensure images cover without distortion */
+    transition: transform 0.3s ease;
+}
+
+.image-scroll-wrapper img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+.hallmarks-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.hallmarks-section h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hallmarks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.hallmark-item {
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.hallmark-item strong {
+    color: #c2185b; /* Highlighted text */
+}
+.courses-container {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px 10px;
+}
+
+.courses h2 {
+    font-size: 2rem;
+    color: #fff;
+    background-color: #0b3a53;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.courses {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.course-card {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 240px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+.course-card img {
+    width: 100%;
+    height: auto;
+}
+
+.course-card h3 {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.course-card p {
+    font-size: 0.9rem;
+    color: #444;
+    margin: 5px 0;
+}
+
+.social-links {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.contact-link {
+    display: block;
+    text-decoration: none;
+    color: #00f;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* Keyframes for scrolling effect */
+@keyframes scroll-images {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100vw); /* Move images left by full screen width */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-item {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .nav-list {
+        width: 100%;
+    }
+
+    .image-scroll-wrapper img {
+        height: 250px; /* Adjust image height for smaller screens */
+    }
+}

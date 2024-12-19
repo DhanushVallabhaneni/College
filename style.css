@@ -54,10 +54,10 @@ body {
     background-color: #004d99;  /* Slightly lighter blue for nav bar */
     padding: 10px 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
-     /* Fix the nav bar at the top */
-    top: 80px;  /* Ensure the navbar is just below the header */
     width: 100%;
-    z-index: 10;  /* Ensure the nav bar is above other content */
+    margin-top: 20px;  /* Add space below the header */
+    position: relative;  /* Ensure navbar is in a positioning context */
+    z-index: 10;  /* Ensure navbar is above other sections */
 }
 
 .nav-item {
@@ -88,7 +88,7 @@ body {
     top: 100%;  /* Ensure dropdown is positioned below nav item */
     left: 0;
     background-color: #005bb5;  /* Strong blue for dropdown */
-    display: none;
+    display: none;  /* Initially hidden */
     width: 200px;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -109,33 +109,9 @@ body {
 
 /* Show list on hover */
 .nav-item:hover .nav-list {
-    display: block;
-}
-.nav-bar {
-    display: flex;
-    background-color: #808080; /* Grey background */
-    color: white;
-    text-align: center;
-    margin-top: 20px;
+    display: block;  /* Show dropdown when hovering over the parent item */
 }
 
-.nav-item {
-    flex: 1;
-    padding: 10px;
-    font-size: 1rem;
-}
-
-.nav-item.active {
-    background-color: #0b3a53; /* Dark blue background for active item */
-    color: #00bfff; /* Highlighted text color */
-}
-
-.nav-item:hover {
-    background-color: #666666; /* Slightly darker grey on hover */
-    cursor: pointer;
-}
-
-/* Scrolling Image Section */
 /* Scrolling Image Section */
 .image-scroll {
     width: 100%;
@@ -143,7 +119,9 @@ body {
     position: relative;
     height: 400px; /* Adjust height as needed */
     background-color: #e0f7fa; /* Light blue background */
-    margin-top: 50px; /* Reduced padding between navbar and scrolling section */
+    margin-top: 40px; /* Add space between the navbar and the image scroll */
+    position: relative;  /* Ensure scrolling section is within its container */
+    z-index: 5;  /* Lower the z-index to ensure it stays behind the navbar */
 }
 
 .image-scroll-wrapper {
@@ -161,6 +139,8 @@ body {
 .image-scroll-wrapper img:hover {
     transform: scale(1.05); /* Zoom effect on hover */
 }
+
+/* Hallmarks Section */
 .hallmarks-section {
     margin: 20px;
     padding: 20px;
@@ -195,6 +175,8 @@ body {
 .hallmark-item strong {
     color: #c2185b; /* Highlighted text */
 }
+
+/* Courses Section */
 .courses-container {
     text-align: center;
     background-color: #f8f8f8;
@@ -243,6 +225,7 @@ body {
     margin: 5px 0;
 }
 
+/* Social Links Section */
 .social-links {
     margin: 10px 0;
     font-size: 1rem;
